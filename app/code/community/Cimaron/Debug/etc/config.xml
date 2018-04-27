@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Cimaron_Catalog>
+			<version>0.2</version>
+		</Cimaron_Catalog>
+	</modules>
+
+	<global>
+		<models>
+			<cimaron_debug>
+				<class>Cimaron_Debug_model</class>
+			</cimaron_debug>
+		</models>
+	</global>
+
+	<frontend>
+		<events>
+
+			<varien_db_adapter_query_before>
+				<observers>
+					<debug>
+						<class>Cimaron_Debug_Model_Debug</class>
+						<method>onBeforeQuery</method>
+						<type>model</type>
+					</debug>
+				</observers>
+			</varien_db_adapter_query_before>
+			<varien_db_adapter_query_after>
+				<observers>
+					<debug>
+						<class>Cimaron_Debug_Model_Debug</class>
+						<method>onAfterQuery</method>
+						<type>model</type>
+					</debug>
+				</observers>
+			</varien_db_adapter_query_after>
+
+			<http_response_send_before>
+				<observers>
+					<debug>
+						<class>Cimaron_Debug_Model_Debug</class>
+						<method>onHttpResponseSendBefore</method>
+						<type>model</type>
+					</debug>
+				</observers>
+			</http_response_send_before>
+		</events>
+	</frontend>
+</config>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Cimaron_Debug>
+			<active>true</active>
+			<codePool>community</codePool>
+			<version>0.2.0</version>
+			<description>Debugging</description>
+		</Cimaron_Debug>
+	</modules>
+</config>
